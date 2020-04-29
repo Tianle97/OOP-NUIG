@@ -103,11 +103,11 @@ public class Films extends Midia {
 
 * Design the way of resolve
   * > Firstly, we need create an interface and named `Production`. Let the abstract class `Media` to implememt it.
-		* > Then give 4 methods in this interface. (In the sub-classes `Films` and `TVSeries` to implements that 4 methods )
-		* > 1st method: `packageToCD()` . Let the movies or tvseries package to CD.
-		* > 2nd method: `processToStream()`. Let the movies or tvseries to Stream (e.g. user wacth vedio on the screen online)
-		* > 3th method: `processToDownload()`. Let the movies or tvseries can dowload.
-		* > 4th method: `packageToBlue_Ray()`. Let the movies or tvseries package to Blue_Ray.
+  * > Then give 4 methods in this interface. (In the sub-classes `Films` and `TVSeries` to implements that 4 methods )
+  * > 1st method: `packageToCD()` . Let the movies or tvseries package to CD.
+  * > 2nd method: `processToStream()`. Let the movies or tvseries to Stream (e.g. user wacth vedio on the screen online)
+  * > 3th method: `processToDownload()`. Let the movies or tvseries can dowload.
+  * > 4th method: `packageToBlue_Ray()`. Let the movies or tvseries package to Blue_Ray.
 * Also that 4 method, concret implement in `Films` and `TVSeries` class.
 * The sample uml diagram:
 ![puml](https://github.com/Tianle97/OOP-NUIG/blob/master/Final_Assignment/p_uml.png)
