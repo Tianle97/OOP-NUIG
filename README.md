@@ -87,7 +87,58 @@ public class Films extends Midia {
 	}
  }
 ```
-*__What is Strategy pattern Design__* ? </br>
+
+## Describe the test scenarios
+In my all unit test class in the model.
+I test different attr getter and setter method to successful
+
+In the `ContainerTest.java` I create 3 methods</br>
+The first method is check the title in the film is null or not
+```java
+// test title exist in every films
+	@Test
+	public void titleExist() throws Exception {
+		for (Films f : container.getFilms()) {
+			Assert.assertNotNull(f.getTitle());
+		}
+	}
+```
+
+The second method check the create different genre is same or not
+```java
+//test film genre match
+	@Test
+	public void genreLooseMatch() throws Exception {
+		Genre g1 = new Genre();
+		g1.setGid(3);
+		g1.setGenre("abc");
+		
+		Genre g2 = new Genre();
+		g2.setGid(3);
+		g2.setGenre("abcd");
+		
+		Assert.assertNotEquals(g1, g2);
+	}
+```
+The third method is for the firector match in the container
+```java
+//test the director match
+	@Test
+	public void directorMatch() throws Exception {
+		for (Films f : container.getFilms()) {
+			String director = f.getDirector();
+			for (People p : container.getPeople()) {
+				if (p.getPid() == (Integer.parseInt(director))) {
+					// System.out.println(city.getName());
+					// Assert.assertEquals(country.getCapital().hashCode(), city.hashCode());
+					Assert.assertEquals(Integer.parseInt(f.getDirector()), p.getPid());
+				}
+			}
+		}
+	}
+```
+
+
 ##  Small Guide for Using this System
 * Download this Java Project from Blackbaord, or go to this [GithubLink](https://github.com/Tianle97/OOP-NUIG) to download.
   * > And unzip this project.
@@ -114,6 +165,8 @@ public class Films extends Midia {
 		
 
 ## System Extend
-		
-		
+In the future we can create a `User` and `Vip_User` in the model, and have a `interface` to check user if pay for the system, let some tvs or film only provide to the vip_user, and also add the attr(vip) in the model tv and film. in the `UserProduction` to check the user is vip or not.</br>
+And also vip_user need have to login for this system then if login successful got the diffrent page with the normal video catalogue page</br>
+
+
 		
