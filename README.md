@@ -140,7 +140,7 @@ The third method is for the firector match in the container
 
 
 ##  Small Guide for Using this System
-* Download this Java Project from Blackbaord, or go to this [GithubLink](https://github.com/Tianle97/OOP-NUIG) to download.
+* Download this Java Project from Blackbaord to download.
   * > And unzip this project.
   * > At the same time open your eclipse or intelliJ (for import this project to IDE work place).
 * Go to `nuig.oop.runtime` pacakge , find the `App.java`.
